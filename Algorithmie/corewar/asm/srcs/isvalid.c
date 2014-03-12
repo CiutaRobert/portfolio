@@ -6,7 +6,7 @@
 /*   By: fflorens <fflorens@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/01/29 22:23:34 by fflorens          #+#    #+#             */
-/*   Updated: 2014/02/02 23:03:18 by gabtoubl         ###   ########.fr       */
+/*   Updated: 2014/03/12 20:11:05 by gabtoubl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ int				is_valid_file(char *file)
 {
 	char		*line;
 	int			fd;
-	int			i;
 	int			k;
 
 	if ((fd = open(file, O_RDONLY)) == -1)
@@ -68,7 +67,6 @@ int				is_valid_file(char *file)
 	line = NULL;
 	while (ft_gnl(fd, &line))
 	{
-		i = -1;
 		k = 0;
 		if (is_comment_or_cmd_line(line))
 			k = 1;
